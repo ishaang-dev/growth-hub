@@ -7,6 +7,11 @@
   --sans-para: "Pathway Extreme", sans-serif;
   --monospace: "JetBrains Mono", monospace;
 
+  --white-100: rgba(255, 255, 255, 0.1);
+  --white-250: rgba(255, 255, 255, 0.25);
+  --white-500: rgba(255, 255, 255, 0.5);
+  --white-750: rgba(255, 255, 255, 0.75);
+
   --tx-red: #b2becd;
   --bg-red: #12181b;
   --pr-red: #ef4444;

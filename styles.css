@@ -9,8 +9,8 @@
 
 body {
   height: 100vh;
-  font-family: var(--sans-para);
-  background-color: var(--bg-purple);
+  font: 1em var(--sans-para);
+  background: var(--bg-purple);
   color: var(--tx-purple);
   text-align: center;
   display: flex;
@@ -19,12 +19,12 @@ body {
 }
 
 main {
-  max-width: 400px;
+  max-width: 25rem;
 }
 
 section {
   height: 100vh;
-  padding: 48px;
+  padding: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,14 +33,14 @@ section {
 
 .text-div {
   text-align: justify;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
-h1 {
-  font-size: xx-large;
+.white-nolink {
+  color: var(--sc-color);
 }
 
 h1,
@@ -49,9 +49,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--sans-head);
-  font-weight: bold;
-  margin-bottom: 8px;
+  font:bold 2.4rem var(--sans-head);
+  margin-bottom: 0.5rem;
   background: -webkit-linear-gradient(135deg, var(--pr-color), var(--gr-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -61,8 +60,9 @@ a {
   color: inherit;
 }
 
-table {
-  width: 100%;
+a:hover {
+  color: var(--sc-color);
+  transition: all 0.2s ease;
 }
 
 table,
@@ -89,11 +89,11 @@ td {
 }
 
 .btn button {
-  font-family: inherit;
-  font-weight: bold;
+  font: bold 0.9rem var(--sans-para);
   border-radius: 2px;
   border-style: none;
   background: linear-gradient(135deg, var(--pr-color) 0%, var(--gr-color) 100%);
+  background-size: 200% 200%;
   color: var(--sc-color);
   padding: 12px 16px;
   cursor: pointer;
@@ -110,16 +110,11 @@ td {
 
 footer {
   padding: 20px;
-  background: linear-gradient(
-    135deg,
-    var(--gr-purple) 0%,
-    var(--pr-purple) 100%
-  );
-  color: rgba(255, 255, 255, 0.75);
-  padding: 20px;
+  background: linear-gradient(135deg, var(--gr-purple) 0%, var(--pr-purple) 100%);
+  color: var(--white-750);
   width: 100%;
 }
 
 footer a {
-  color: white;
+  color: var(--sc-purple);
 }
