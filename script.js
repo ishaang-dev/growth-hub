@@ -36,11 +36,12 @@ function submitForm(event) {
   })
     .then(() => {
       setTimeout(() => {
+        form.reset();
         scrollToSection("#about");
         setTimeout(() => {
           alert("Form submitted successfully!");
         }, 1500);
-      }, 500);
+      }, 200);
     })
     .catch((error) => console.error(error));
 }
