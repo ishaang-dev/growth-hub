@@ -97,7 +97,7 @@ td {
   transition: all 0.2s ease;
 }
 
-#submitButton {
+#submitButton:disabled {
   cursor: not-allowed;
 }
 
@@ -137,7 +137,7 @@ select {
 
 input[type="text"]:valid,
 select:valid,
-select option:enabled {
+option:enabled {
   color: var(--sc-color);
 }
 

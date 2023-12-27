@@ -37,6 +37,8 @@ function submitForm(event) {
     .then(() => {
       setTimeout(() => {
         form.reset();
+        grecaptcha.reset();
+        expiredCallback();
         scrollToSection("#about");
         setTimeout(() => {
           alert("Form submitted successfully!");
@@ -50,6 +52,12 @@ function recaptchaCallback() {
   const submitButton = document.getElementById("submitButton");
   submitButton.removeAttribute("disabled");
   submitButton.classList.add("submitEnabled");
+}
+
+function expiredCallback() {
+  const submitButton = document.getElementById("submitButton");
+  submitButton.setAttribute("disabled", true);
+  submitButton.classList.remove("submitEnabled");
 }
 
 // Changes color variables for each section
@@ -76,13 +84,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const studentNameInput = document.querySelector('input[name="studentName"]');
   const fatherNameInput = document.querySelector('input[name="fatherName"]');
 
-  if (studentNameInput && fatherNameInput) {
-    studentNameInput.addEventListener("input", function () {
+  function UpperCaseName(inputNameElement) {
+    inputNameElement.addEventListener("input", function () {
+      if (this.value.length < 6) {
+        return;
+      }
       this.value = this.value.toUpperCase();
     });
+  }
 
-    fatherNameInput.addEventListener("input", function () {
-      this.value = this.value.toUpperCase();
-    });
+  if (studentNameInput && fatherNameInput) {
+    UpperCaseName(studentNameInput);
+    UpperCaseName(fatherNameInput);
   }
 });

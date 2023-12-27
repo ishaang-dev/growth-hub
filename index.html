@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
   <head>
     <meta charset="UTF-8" />
     <title>Growth Hub - Tuition Classes</title>
@@ -21,6 +21,7 @@
       integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV"
       crossorigin="anonymous"
     />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
   <body>
     <main>
@@ -95,7 +96,6 @@
             name="admissionForm"
             method="POST"
             data-netlify="true"
-            data-netlify-recaptcha="true"
             onsubmit="submitForm(event)"
           >
             <label for="studentName"
@@ -104,7 +104,6 @@
                 id="studentName"
                 name="studentName"
                 placeholder="Bruce Wayne"
-                minlength="3"
                 required
             /></label>
             <label for="studentClass"
@@ -130,7 +129,6 @@
                 id="fatherName"
                 name="fatherName"
                 placeholder="Thomas Wayne"
-                minlength="3"
                 required
             /></label>
             <label for="contactNum"
@@ -141,8 +139,8 @@
                 placeholder="+91 9876543210"
                 pattern="[6-9]\d{9}"
                 inputmode="numeric"
-                required
                 maxlength="10"
+                required
             /></label>
             <label for="forYear"
               >Academic Year:<select id="forYear" name="forYear" required>
@@ -150,7 +148,13 @@
                 <option value="2024-25">2024-25</option>
               </select></label
             >
-            <div data-netlify-recaptcha="true"></div>
+            <div
+              class="g-recaptcha"
+              data-theme="dark"
+              data-sitekey="6LdAvUIUAAAAAHjrjmjtNTcXyKm0WKwefLp-dQv9"
+              data-callback="recaptchaCallback"
+              data-expired-callback="expiredCallback"
+            ></div>
             <div>
               <input
                 type="submit"
