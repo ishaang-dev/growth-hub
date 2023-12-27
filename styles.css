@@ -97,13 +97,17 @@ td {
   transition: all 0.2s ease;
 }
 
+#submitButton {
+  cursor: not-allowed;
+}
+
 .btn:hover,
-#submitButton:hover {
+.submitEnabled:hover {
   transform: scale(1.1);
 }
 
 .btn:active,
-#submitButton:active {
+.submitEnabled:active {
   transform: scale(1);
 }
 

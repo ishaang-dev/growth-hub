@@ -46,6 +46,12 @@ function submitForm(event) {
     .catch((error) => console.error(error));
 }
 
+function recaptchaCallback() {
+  const submitButton = document.getElementById("submitButton");
+  submitButton.removeAttribute("disabled");
+  submitButton.classList.add("submitEnabled");
+}
+
 // Changes color variables for each section
 const sections = document.querySelectorAll("section");
 
