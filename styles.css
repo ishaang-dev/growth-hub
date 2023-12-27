@@ -2,16 +2,16 @@
 
 * {
   box-sizing: border-box;
+  color: inherit;
   text-decoration: none;
   margin: 0;
   padding: 0;
 }
 
 body {
-  height: 100vh;
   font: 1em var(--sans-para);
-  background: var(--bg-purple);
-  color: var(--tx-purple);
+  background: var(--bg-color);
+  color: var(--tx-color);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -39,8 +39,10 @@ section {
   gap: 0.5rem;
 }
 
-.white-nolink {
-  color: var(--sc-color);
+section:nth-last-child(2) .text-div {
+  margin-bottom: 0;
+  width: 100%;
+  text-align: left;
 }
 
 h1,
@@ -49,15 +51,19 @@ h3,
 h4,
 h5,
 h6 {
-  font:bold 2.4rem var(--sans-head);
+  font: bold 2.4rem var(--sans-head);
   margin-bottom: 0.5rem;
   background: -webkit-linear-gradient(135deg, var(--pr-color), var(--gr-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-a {
-  color: inherit;
+.hidden {
+  display: none;
+}
+
+.hover {
+  color: var(--sc-color);
 }
 
 a:hover {
@@ -76,7 +82,6 @@ td {
 
 .price-tag {
   font-weight: bold;
-  cursor: pointer;
   transition: all 0.2s ease;
 }
 
@@ -84,11 +89,8 @@ td {
   color: var(--sc-color);
 }
 
-.price-tag:active {
-  color: var(--tx-color);
-}
-
-.btn button {
+.btn,
+#submitButton {
   font: bold 0.9rem var(--sans-para);
   border-radius: 2px;
   border-style: none;
@@ -100,21 +102,63 @@ td {
   transition: all 0.2s ease;
 }
 
-.btn button:hover {
+.btn:hover,
+#submitButton:hover {
   transform: scale(1.1);
 }
 
-.btn button:active {
+.btn:active,
+#submitButton:active {
   transform: scale(1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+form div {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+input[type="text"],
+select {
+  font-family: var(--sans-para);
+  font-size: 1rem;
+  width: 100%;
+  background-color: var(--bg-color);
+  color: var(--white-400);
+  border: none;
+  border-bottom: 1px solid var(--tx-color);
+  transition: all 0.2s ease;
+}
+
+input[type="text"]:valid,
+select:valid,
+select option:enabled {
+  color: var(--sc-color);
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-bottom: 1px solid var(--sc-color);
 }
 
 footer {
   padding: 20px;
-  background: linear-gradient(135deg, var(--gr-purple) 0%, var(--pr-purple) 100%);
-  color: var(--white-750);
+  background: linear-gradient(
+    135deg,
+    var(--gr-purple) 0%,
+    var(--pr-purple) 100%
+  );
+  color: var(--white-800);
   width: 100%;
 }
 
 footer a {
-  color: var(--sc-purple);
+  color: var(--sc-color);
 }

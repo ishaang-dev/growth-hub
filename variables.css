@@ -1,38 +1,31 @@
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=JetBrains+Mono:wght@400;700&family=Livvic:wght@400;700&family=Pathway+Extreme:opsz,wght@8..144,400;8..144,700&family=Playfair+Display:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Livvic:wght@400;700&family=Pathway+Extreme:opsz,wght@8..144,400;8..144,700&display=swap");
 
 :root {
-  --serif-head: "Playfair Display", serif;
-  --serif-para: "EB Garamond", serif;
+  /* --serif-head: "Playfair Display", serif; */
+  /* --serif-para: "EB Garamond", serif; */
   --sans-head: "Livvic", sans-serif;
   --sans-para: "Pathway Extreme", sans-serif;
-  --monospace: "JetBrains Mono", monospace;
+  /* --monospace: "JetBrains Mono", monospace; */
 
-  --white-100: rgba(255, 255, 255, 0.1);
-  --white-250: rgba(255, 255, 255, 0.25);
-  --white-500: rgba(255, 255, 255, 0.5);
-  --white-750: rgba(255, 255, 255, 0.75);
+  --white-200: rgba(255, 255, 255, 0.2);
+  --white-400: rgba(255, 255, 255, 0.4);
+  --white-600: rgba(255, 255, 255, 0.6);
+  --white-800: rgba(255, 255, 255, 0.8);
 
-  --tx-red: #b2becd;
-  --bg-red: #12181b;
+  --tx-color: #b2becd;
+  --bg-color: #12181b;
+  --tr-color: #0e1417;
+  --sc-color: #ffffff;
+
   --pr-red: #ef4444;
-  --sc-red: #ffffff;
   --gr-red: #f38321;
 
-  --tx-green: #b2becd;
-  --bg-green: #12181b;
   --pr-green: #22c55e;
-  --sc-green: #ffffff;
   --gr-green: #277be1;
 
-  --tx-purple: #b2becd;
-  --bg-purple: #12181b;
   --pr-purple: #a855f7;
-  --sc-purple: #ffffff;
   --gr-purple: #f10f9d;
 
-  --tx-yellow: #b2becd;
-  --bg-yellow: #12181b;
   --pr-yellow: #eab308;
-  --sc-yellow: #ffffff;
   --gr-yellow: #cb944d;
 }

@@ -35,23 +35,25 @@
             - it's about quality over quantity!
           </p>
         </div>
-        <a href="#why-us" class="btn"><button>Why us? Here's why 🤔</button></a>
+        <button class="btn" onclick="scrollAnimation(event, '#why-us')">
+          Why us? Here's why
+        </button>
       </section>
 
       <section id="why-us" class="green">
         <h2>Why Us</h2>
         <div class="text-div">
           <p>
-            Hey, I'm <span class="white-nolink">Saumya</span>, and I'll be
+            Hey, I'm <span class="hover">Saumya</span>, and I'll be
             guiding our kid. It's pretty straightforward, but I understand
             you've got a lot on your plate. I'll take care of the teaching while
             you focus on your stuff. Your kid's academics? Covered. Let's make
             learning effortless!
           </p>
         </div>
-        <a href="#fees" class="btn"
-          ><button>What's the tuition fee? 💸</button></a
-        >
+        <button class="btn" onclick="scrollAnimation(event, '#fees')">
+          What's the tuition fee?
+        </button>
       </section>
 
       <section id="fees" class="purple">
@@ -59,7 +61,7 @@
         <div class="text-div">
           <p>
             Simple and straightforward! I cover all subjects.
-            <span class="white-nolink"
+            <span class="hover"
               >Just click the price in the table to select it!</span
             >
           </p>
@@ -71,42 +73,106 @@
             </tr>
             <tr>
               <td>1 to 6</td>
-              <td class="price-tag">
-                <a
-                  href="https://wa.me/6395752210?text=*Class%3A*%201%20-%206%0A*Payment%3A*%20Monthly"
-                  >₹1199</a
-                >
-              </td>
-              <td class="price-tag">
-                <a
-                  href="https://wa.me/6395752210?text=*Class%3A*%201%20-%206%0A*Payment%3A*%20Yearly"
-                  >₹11990</a
-                >
-              </td>
+              <td class="price-tag">₹11990</td>
+              <td class="price-tag">₹11990</td>
             </tr>
             <tr>
               <td>7 to 8</td>
-              <td class="price-tag">
-                <a
-                  href="https://wa.me/6395752210?text=*Class%3A*%207%20-%208%0A*Payment%3A*%20Monthly"
-                  >₹1399</a
-                >
-              </td>
-              <td class="price-tag">
-                <a
-                  href="https://wa.me/6395752210?text=*Class%3A*%207%20-%208%0A*Payment%3A*%20Yearly"
-                  >₹13990</a
-                >
-              </td>
+              <td class="price-tag">₹13990</td>
+              <td class="price-tag">₹13990</td>
             </tr>
           </table>
         </div>
-        <a href="#contact" class="btn"
-          ><button>Keep scrolling, there's more ⏬</button></a
-        >
+        <button class="btn" onclick="scrollAnimation(event, '#form')">
+          All set, let's go
+        </button>
       </section>
 
-      <section id="contact" class="yellow">
+      <section id="form" class="red">
+        <h2>Enter Details</h2>
+        <div class="text-div">
+          <form
+            name="admissionForm"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            onsubmit="submitForm(event)"
+          >
+            <p class="hidden">
+              <label>
+                Don't fill this out if you're human: <input name="bot-field" />
+              </label>
+            </p>
+
+            <label for="studentName"
+              >Full Name:<input
+                type="text"
+                id="studentName"
+                name="studentName"
+                placeholder="Bruce Wayne"
+                minlength="3"
+                required
+            /></label>
+
+            <label for="studentClass"
+              >Select Class:<select
+                id="studentClass"
+                name="studentClass"
+                required
+              >
+                <option value="" disabled selected>Select Class</option>
+                <option value="1st">Class 1</option>
+                <option value="2nd">Class 2</option>
+                <option value="3rd">Class 3</option>
+                <option value="4th">Class 4</option>
+                <option value="5th">Class 5</option>
+                <option value="6th">Class 6</option>
+                <option value="7th">Class 7</option>
+                <option value="8th">Class 8</option>
+              </select></label
+            >
+
+            <label for="fatherName"
+              >Father's Name:<input
+                type="text"
+                id="fatherName"
+                name="fatherName"
+                placeholder="Thomas Wayne"
+                minlength="3"
+                required
+            /></label>
+
+            <label for="contactNum"
+              >Phone Number:<input
+                type="text"
+                id="contactNum"
+                name="contactNum"
+                placeholder="+91 9876543210"
+                pattern="[6-9]\d{9}"
+                inputmode="numeric"
+                required
+                maxlength="10"
+            /></label>
+
+            <label for="forYear"
+              >Academic Year:<select id="forYear" name="forYear" required>
+                <option value="2023-24">2023-24</option>
+                <option value="2024-25">2024-25</option>
+              </select></label
+            >
+
+            <div>
+              <input
+                type="submit"
+                id="submitButton"
+                value="Submit and continue"
+              />
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section id="about" class="yellow">
         <h2>Contact Us</h2>
         <div class="text-div">
           <p>
@@ -133,7 +199,9 @@
             <a href="tel:+919457457163" target="_blank">📞 +91 9457-457-163</a>
           </p>
         </div>
-        <a href="#welcome" class="btn"><button>Head back home ⬆️</button></a>
+        <button class="btn" onclick="scrollAnimation(event, '#welcome')">
+          Head back home
+        </button>
       </section>
     </main>
 
